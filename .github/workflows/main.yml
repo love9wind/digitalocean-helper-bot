@@ -18,8 +18,9 @@ jobs:
           username: ${{ env.DOCKER_USERNAME }}
           password: ${{ env.DOCKER_PASSWORD }}
       - name: Build and push image
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
-          context: .
           push: true
+          tags: love9wind/dohelpbot:latest
           dockerfile: Dockerfile
+
