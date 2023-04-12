@@ -22,7 +22,7 @@ jobs:
           password: ${{ env.DOCKER_PASSWORD }}
           dockerfile: Dockerfile
         env:
-          DOCKER_AUTH_CONFIG: ${{ toJson(auth) }}
+          DOCKER_AUTH: ${{ toJson(auth) }}
           auth: {
             "username": "${{ secrets.DOCKER_USERNAME }}",
             "password": "${{ secrets.DOCKER_PASSWORD }}"
